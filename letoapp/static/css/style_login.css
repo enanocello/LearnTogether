@@ -1,0 +1,123 @@
+@keyframes fade {
+    from {opacity: 0}to {opacity: 1;} 
+}
+@keyframes mover_fade {
+    from {transform: translateY(-200px); opacity: 0; filter:blur(5px)}
+    to {opacity: 1;filter:blur(0px)}
+}
+@keyframes mover_fade2 {
+    from {transform: translateY(-200px); opacity: 0; filter:blur(5px)}
+    to {opacity: 0.9;filter:blur(0px)}
+}
+body {
+    background-color: #070c19;
+}
+body:hover {
+    cursor: default;
+}
+#titulo{
+    color: #a1fda1;
+    font-size: 90px;
+    font-family: 'Chakra Petch';
+    text-shadow: 5px 4px 3px #343c42;
+    text-align: right;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-right: 10%;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+.logo_usm {
+    float: left;
+    display: inline;
+    margin-top: 16px;
+    margin-left: 10%;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+#formulario{
+    display: block;
+    margin: auto;
+    color: white;
+    font-family: 'Chakra Petch';
+    animation-name: mover_fade2;
+    animation-duration: 1s;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 20px;
+    background-color: #053b11;
+    overflow: hidden;
+    padding: 0px 25px 0px 25px;
+    width: 300px;
+    box-shadow: 2px 2px 3px #343c42;
+    opacity: 0.9;
+}
+.right {
+    float: right;
+}
+.subtitulo {
+    text-align: center;
+    font-size: 25px;
+    margin: 15px 0 30px 0;
+}
+.error {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 80, 80);
+    margin: 0;
+}
+.login {
+    display: block;
+    width: 130px;
+    height: 30px;
+    margin: 15px auto;
+    
+}
+.login:hover {
+    cursor: pointer;
+}
+.boton {
+    font-family: 'Chakra Petch';
+    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+.boton:hover {
+    color:white;
+    background-color: rgb(3, 102, 72);
+}
+.pregunta {
+    display: block;
+    margin: 10px auto;
+    font-size: 12px;
+    transition: color 0.4s ease;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+}
+.pregunta:hover {
+    cursor: pointer;
+    color: aquamarine;
+    text-decoration: none;
+}
+.pregunta:link {
+    cursor: pointer;
+    color: white;
+}
+.pregunta:visited {
+    cursor: pointer;
+    color: white;
+}
+.lista {
+    background-color: rgba(255, 255, 255, 0);
+    transition: ease 0.2s;
+    margin: 2px auto;
+    border-radius: 10px;
+    padding-left: 5px;
+
+}
+.lista:hover {
+    background-color: rgba(255, 255, 255, 0.199);
+}

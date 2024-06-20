@@ -1,0 +1,143 @@
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    } 
+}
+@keyframes mover_fade {
+    from {transform: translateY(-200px); opacity: 0; filter:blur(5px)}
+    to {opacity: 1;filter:blur(0px)}
+}
+@keyframes mover_fade2 {
+    from {transform: translateY(-200px); opacity: 0; filter:blur(5px)}
+    to {opacity: 0.9;filter:blur(0px)}
+}
+@keyframes mover_fade3 {
+    from {transform: translatex(200px); opacity: 0; filter:blur(5px)}
+    to {opacity: 0.9;filter:blur(0px)}
+}
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-5deg);
+    }
+    20% {
+      transform: rotateZ(4deg);
+    }
+    25% {
+      transform: rotateZ(-4deg);
+    }
+    30% {
+      transform: rotateZ(2deg);
+    }
+    35% {
+      transform: rotateZ(-1deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+body {
+    background-color: #263761;
+    font-family: 'Chakra Petch';
+    color: white;
+
+}
+body:hover {
+    cursor: default;
+}
+#titulo{
+    color: #fcff45;
+    font-size: 90px;
+    font-family: 'Chakra Petch';
+    text-shadow: 5px 4px 3px #343c42;
+    text-align: right;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-right: 10%;
+}
+#subtitulo {
+    color: #f7f308;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Chakra Petch';
+    text-shadow: 3px 2px 3px #014e3e;
+    padding: 0 0 0 0;
+    margin: 0 0 10px 0;
+}
+.logo_usm {
+    float: left;
+    display: inline;
+    margin-top: 16px;
+    margin-left: 10%;
+}
+#bloque_principal{
+    background-color: rgb(59, 0, 48);
+    width: 25%;
+    margin-left: 10%;
+    padding: 10px 20px 20px 20px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+    animation-name: mover_fade3;
+    animation-duration: 1s; 
+}
+.bloque {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.068);
+    padding: 5px 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: ease 0.2s;
+}
+.bloque:hover {
+    background-color: rgba(255, 255, 255, 0.199);
+    cursor: default;
+}
+.lista {
+    background-color: rgba(255, 255, 255, 0);
+    transition: ease 0.2s;
+    margin: 2px 0;
+    border-radius: 10px;
+    padding: 0 5px;
+    list-style: none;
+}
+.lista:hover {
+    background-color: rgba(255, 255, 255, 0.199);
+    cursor: default;
+}
+.pregunta {
+    color: white;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.pregunta:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: aquamarine;
+}
+.pregunta:link {
+    cursor: pointer;
+    color: white;
+}
+.pregunta:visited {
+    cursor: pointer;
+    color: white;
+}
+.right {
+    margin: 0 0;
+    float:right;
+}
+.mover {
+    transition: ease 0.2s;
+}
+.mover:hover {
+    transform: scale(1.06);
+}

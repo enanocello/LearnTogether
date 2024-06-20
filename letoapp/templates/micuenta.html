@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html {% load static %}>
+<head>
+    <title>Mi Cuenta</title>
+    <link rel="stylesheet" type='text/css' href="{% static "css/style_micuenta.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,600&display=swap" rel="stylesheet">
+    <img 
+        class="logo_usm" 
+        src="{% static "images/logo_usm.png" %}" 
+        width="90px" 
+        height="90px"
+        title="Universidad Tecnica Federico Santa Maria"
+        >
+    <h1 id="titulo">        
+        DATOS PERSONALES
+    </h1>
+    
+</head>
+<body style="
+background-image: url('{% static "images/micuenta_background.jpg" %}'); 
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed
+">
+
+    <div id="bloque_principal">
+        <p id="subtitulo">Tus Datos</p>
+            <div class="bloque">
+                Nombre: <p class=right>{{user.first_name}} {{user.last_name}}</p><br>
+                Usuario: <p class=right>{{user.username}}</p><br>
+                Rol: <p class=right>{{rol}}</p><br>
+            </div>
+            <div class="bloque">
+                BLOQUES LIBRES:
+                {% for horario in horarios %}
+                    <li class="lista">{{horario}}<br></li>
+                {% endfor %}
+            </div>
+        <a class="pregunta lista mover" href="/actualizar_horario">Actualizar horarios </a>
+        <a class="pregunta lista mover" href="/homepage">Volver a la Pagina Principal </a>
+    </div>
+</body>
+
+
+</html>
